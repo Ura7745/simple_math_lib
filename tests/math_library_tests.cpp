@@ -77,3 +77,6 @@ TEST_F(MathLibTestFixture, GreatestCommonDivider)
 {
     EXPECT_EQ(MathLib::GCD(10, 6), 2);
 }
+TEST(MathLibTest, ThirdAngle) {
+    EXPECT_EQ(find_third_angle(60.0, 70.0), 50.0);
+}
