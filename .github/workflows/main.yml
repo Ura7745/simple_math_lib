@@ -33,10 +33,10 @@ jobs:
     - name: Configure CMake
       run: >
         cmake -B build
-        -DCMAKE_CXX_COMPILER=${{ matrix.cpp_compiler }}
-        -DCMAKE_C_COMPILER=${{ matrix.c_compiler }}
+        "-DCMAKE_CXX_COMPILER=${{ matrix.cpp_compiler }}"
+        "-DCMAKE_C_COMPILER=${{ matrix.c_compiler }}"
         -DCMAKE_BUILD_TYPE=Release
-        -DCMAKE_POLICY_VERSION_MINIMUM=3.5
+        "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
         -DCMAKE_CXX_FLAGS="-w"
         -S .
 
