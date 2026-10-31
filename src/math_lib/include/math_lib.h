@@ -70,3 +70,4 @@ namespace MathLib
     // Function to search GCD
     int GCD(int a, int b);
 }
+double find_third_angle(double a, double b);

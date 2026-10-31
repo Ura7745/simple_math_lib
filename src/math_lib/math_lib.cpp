@@ -43,4 +43,6 @@ namespace MathLib
 		return GCD(b, a % b);
 	}
 }
-
+double find_third_angle(double a, double b) {
+    return 180.0 - (a + b);
+}
