@@ -18,8 +18,10 @@ int main(int argc, char* argv[])
     {
         case 1:
             std::cout << "The least common multiple is 1" << std::endl;
+            break;
         case 2:
             std::cout << "The least common multiple is 2" << std::endl;
+            break;
     }
     return 0;
 }
