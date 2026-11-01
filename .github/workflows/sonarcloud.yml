@@ -12,7 +12,8 @@ jobs:
   Analysis:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
@@ -28,7 +29,4 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          args: >
-            -Dsonar.projectKey=Ura7745_simple_math_lib
-            -Dsonar.organization=ura7745
-            -Dsonar.coverage.exclusions=**/*
+          args: -Dsonar.projectKey=Ura7745_simple_math_lib -Dsonar.organization=ura7745 -Dsonar.coverage.exclusions=**/*
