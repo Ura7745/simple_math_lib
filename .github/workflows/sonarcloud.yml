@@ -30,4 +30,4 @@ jobs:
         with:
           args:
             -Dsonar.projectKey=Ura7745_simple_math_lib
-            -Dsonar.organization=Ura7745
+            -Dsonar.organization=гra7745
