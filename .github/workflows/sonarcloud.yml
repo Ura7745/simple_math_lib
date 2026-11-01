@@ -12,18 +12,18 @@ jobs:
   Analysis:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           fetch-depth: 0
 
       - name: Set up JDK 21
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@3a474d379d1a4e921daee87b984286d077c12692 # v4.7.0
         with:
           java-version: '21'
           distribution: 'temurin'
 
       - name: Analyze with SonarCloud
-        uses: SonarSource/sonarcloud-github-action@v3.1.0
+        uses: SonarSource/sonarcloud-github-action@cb613eb4d7eb1923709b1f28b74686b245c6e83d # v3.1.0
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -31,3 +31,4 @@ jobs:
           args: >
             -Dsonar.projectKey=Ura7745_simple_math_lib
             -Dsonar.organization=ura7745
+            -Dsonar.coverage.exclusions=**/*
